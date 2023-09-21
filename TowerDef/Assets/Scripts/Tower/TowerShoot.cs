@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TowerShoot : MonoBehaviour
 {
+    public int TargetWhat;
+
     public float TowerRange;
     public float FireRate;
     public float FireSpeed;
@@ -24,6 +26,7 @@ public class TowerShoot : MonoBehaviour
     private float distance;
 
 
+
     void Start()
     {
         scale = TowerRange / 5;
@@ -36,16 +39,46 @@ public class TowerShoot : MonoBehaviour
 
         Bloons = GameObject.FindGameObjectsWithTag("Bloon");
 
-        distance = TowerRange;
+        float distance = 999;
+        float BloonAnimClosest = 0;
+        float BloonAnimfarest = 999;
+        Target = null;
+
         foreach (GameObject Bloon in Bloons)
         {
-            if (distance > Vector3.Distance(gameObject.transform.position, Bloon.transform.position))
+            if (TowerRange > Vector3.Distance(gameObject.transform.position, Bloon.transform.position))
             {
-                distance = Vector3.Distance(gameObject.transform.position, Bloon.transform.position);
-                Target = Bloon;
+                if (TargetWhat == 0)
+                {
+                    if(BloonAnimClosest < Bloon.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime)
+                    {
+                        Target = Bloon;
+                        BloonAnimClosest = Bloon.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime;
+                        distance = Vector3.Distance(gameObject.transform.position, Bloon.transform.position);
+                    }
+                }
+                else if (TargetWhat == 1)
+                {
+                    if (BloonAnimfarest > Bloon.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime)
+                    {
+                        Target = Bloon;
+                        BloonAnimfarest = Bloon.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime;
+                        distance = Vector3.Distance(gameObject.transform.position, Bloon.transform.position);
+                    }
+                }
+                else
+                {
+                    if (distance > Vector3.Distance(gameObject.transform.position, Bloon.transform.position))
+                    {
+                        Target = Bloon;
+                        distance = Vector3.Distance(gameObject.transform.position, Bloon.transform.position);
+                    }
+                }
+
             }
         }
-        if (distance != TowerRange)
+
+        if (Target != null)
         {
             if (Time.time > timestamp)
             {
@@ -64,6 +97,7 @@ public class TowerShoot : MonoBehaviour
 
         bullet.GetComponent<TowerBullet>().FireSpeed = FireSpeed;
         bullet.GetComponent<TowerBullet>().Damage = Damage;
+        bullet.GetComponent<TowerBullet>().penetrating = penetrating;
 
         Object.Destroy(bullet, (TowerRange + 1.0f ) / FireSpeed );
     }

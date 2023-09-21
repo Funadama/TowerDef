@@ -1,0 +1,22 @@
+{
+    "TowerFlameThrower": [
+    {
+        "TowerSprite": "TowerFlame0",
+        "BulletSprite": "FlameBullet",
+        "Cost": 100,
+        "TowerRange": 3.5,
+        "FireRate": 300,
+        "FireSpeed": 10,
+        "Damage": 1
+    },
+    {
+        "TowerSprite": "TowerFlame1",
+        "BulletSprite": "FlameBullet",
+        "Cost": 250,
+        "TowerRange": 4,
+        "FireRate": 300,
+        "FireSpeed": 10,
+        "Damage": 2
+    }
+    ]
+}

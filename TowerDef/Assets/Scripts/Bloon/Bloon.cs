@@ -6,7 +6,7 @@ public class Bloon : MonoBehaviour
 {
     private Animator animator;
     private float normalizedTime;
-    public int Heath;
+    public float Heath;
 
     void Start()
     {
@@ -21,12 +21,21 @@ public class Bloon : MonoBehaviour
     }
 
 
-    void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if(collision.collider.tag == "Bullet")
+        if(collision.GetComponent<Collider>().tag == "Bullet")
         {
-            Debug.Log(collision.collider.tag);
+            Heath -= collision.GetComponent<TowerBullet>().Damage;
+
+            if (!collision.GetComponent<TowerBullet>().penetrating)
+            {
+                Destroy(collision.gameObject);
+            }
+
+            if (Heath <= 0)
+            {
+                Object.Destroy(gameObject);
+            }
         }
-        Debug.Log(collision.collider.tag);
     }
 }

@@ -7,6 +7,7 @@ TagManager:
   - Map
   - Bloon
   - Bullet
+  - Tower
   layers:
   - Default
   - TransparentFX

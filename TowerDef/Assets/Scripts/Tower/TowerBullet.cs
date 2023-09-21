@@ -6,6 +6,7 @@ public class TowerBullet : MonoBehaviour
 {
     public float FireSpeed;
     public float Damage;
+    public bool penetrating;
 
     // Update is called once per frame
     void Update()
