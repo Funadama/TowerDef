@@ -20,7 +20,7 @@ public class Select : MonoBehaviour
             {
                 if (hit.transform.tag == "Tower")
                 {
-                    hit.collider.gameObject.GetComponent<TowerSelect>().Select();
+                    gameObject.GetComponent<TowerSelect>().Select(hit.collider.gameObject);
                 }
                 else if (hit.transform.tag == "Map")
                 {
