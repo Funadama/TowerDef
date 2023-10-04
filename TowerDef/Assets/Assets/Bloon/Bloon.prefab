@@ -168,6 +168,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Heath: 15
+  AtEnd: 0
+  Health: {fileID: 138532976655323563, guid: 4072721f51c031444b76d8b8bd15fa04, type: 3}
 --- !u!54 &6494315774295849866
 Rigidbody:
   m_ObjectHideFlags: 0
