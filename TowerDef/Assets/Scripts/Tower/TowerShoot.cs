@@ -27,6 +27,7 @@ public class TowerShoot : MonoBehaviour
 
 
 
+
     void Start()
     {
         scale = TowerRange / 5;
@@ -39,7 +40,7 @@ public class TowerShoot : MonoBehaviour
 
         Bloons = GameObject.FindGameObjectsWithTag("Bloon");
 
-        float distance = 999;
+        distance = 999;
         float BloonAnimClosest = 0;
         float BloonAnimfarest = 999;
         Target = null;
@@ -90,8 +91,8 @@ public class TowerShoot : MonoBehaviour
 
     private void Shoot()
     {
-        Vector3 velocity = Target.GetComponent<Animator>().velocity / (FireSpeed / distance);
-        Vector3 direction = (Target.transform.position + velocity )- gameObject.transform.position;
+        Vector3 velocity = (Target.GetComponent<Animator>().velocity / FireSpeed) * distance;
+        Vector3 direction = (Target.transform.position + velocity) - gameObject.transform.position;
         GameObject bullet = Instantiate(Bulletprefab, gameObject.transform.position , Quaternion.identity);
         bullet.transform.forward = direction;
 

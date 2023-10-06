@@ -6,26 +6,17 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    private float HeatlhPlayer;
+    public float HeatlhPlayer;
     public TMP_Text txt;
 
     void Start()
     {
-        HeatlhPlayer = 500;
-        Debug.Log(HeatlhPlayer);
         txt.text = "Health - " + HeatlhPlayer;
     }
 
-    void Update()
-    {
-
-    }
     public void RemoveHealth(float Hp)
     {
-  
-        Debug.Log(Hp);
-        Debug.Log(HeatlhPlayer);
-
+        HeatlhPlayer -= Hp;
         txt.text = "Health - " + HeatlhPlayer;
         if (HeatlhPlayer < 0)
         {

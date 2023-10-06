@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class Bloon : MonoBehaviour
 {
     private Animator animator;
     private float normalizedTime;
-    public float Heath;
+    public float BloonHealth;
     public bool AtEnd;
-    public GameObject Health;
+    public GameObject HealthObject;
+    public GameObject MoneyObject;
 
 
     void Start()
@@ -23,7 +26,7 @@ public class Bloon : MonoBehaviour
         normalizedTime = stateInfo.normalizedTime;
         if (AtEnd)
         {
-            Health.GetComponent<Health>().RemoveHealth(Heath);
+            HealthObject.GetComponent<Health>().RemoveHealth(BloonHealth);
             Destroy(gameObject);
         }
         //Debug.Log("Normalized Time: " + normalizedTime);
@@ -34,14 +37,17 @@ public class Bloon : MonoBehaviour
     {
         if (collision.GetComponent<Collider>().tag == "Bullet")
         {
-            Heath -= collision.GetComponent<TowerBullet>().Damage;
+            MoneyObject.GetComponent<Money>().AddMoney(Mathf.RoundToInt(collision.GetComponent<TowerBullet>().Damage));
+            
+            BloonHealth -= collision.GetComponent<TowerBullet>().Damage;
+            
 
             if (!collision.GetComponent<TowerBullet>().penetrating)
             {
                 Destroy(collision.gameObject);
             }
 
-            if (Heath <= 0)
+            if (BloonHealth <= 0)
             {
                 Object.Destroy(gameObject);
             }
