@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
 {
     public float HeatlhPlayer;
     public TMP_Text txt;
+    public Canvas Dead;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class Health : MonoBehaviour
         if (HeatlhPlayer < 0)
         {
             Debug.Log("dead");
+            Dead.gameObject.SetActive(true);
         }
     }
 }

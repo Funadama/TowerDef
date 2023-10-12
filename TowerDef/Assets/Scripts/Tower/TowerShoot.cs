@@ -6,6 +6,9 @@ public class TowerShoot : MonoBehaviour
 {
     public int TargetWhat;
 
+    public int AtUpgrade;
+    public string TowerSprite;
+    public int TowerUpgrade;
     public float TowerRange;
     public float FireRate;
     public float FireSpeed;
