@@ -2005,7 +2005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c2f8e697a66c6d428967e76c11535da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AmountMoney: 150
+  AmountMoney: 75
   txt: {fileID: 829936446}
 --- !u!114 &829936446
 MonoBehaviour:
@@ -2672,7 +2672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32b2ce86b59527c49a8d435c76a7ad60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObjectToMove: {fileID: 653192671}
+  TowerUI: {fileID: 1679901633}
 --- !u!114 &963194231
 MonoBehaviour:
   m_ObjectHideFlags: 0
