@@ -1,22 +1,54 @@
 {
     "Upgrade": [
     {
-        "TowerSprite": "TowerFlame0",
+        "TowerSprite": "Flame Turret0",
         "BulletSprite": "FlameBullet",
-        "Cost": 100,
+        "Cost": 125,
         "TowerRange": 3.5,
-        "FireRate": 300,
+        "FireRate": 280,
         "FireSpeed": 10,
-        "Damage": 1
+        "Damage": 1,
+        "penetrating": false
     },
     {
-        "TowerSprite": "TowerFlame1",
+        "TowerSprite": "Flame Turret2",
         "BulletSprite": "FlameBullet",
         "Cost": 250,
         "TowerRange": 4,
-        "FireRate": 300,
+        "FireRate": 280,
         "FireSpeed": 10,
-        "Damage": 2
+        "Damage": 1,
+        "penetrating": true
+    },
+    {
+        "TowerSprite": "Flame Turret3",
+        "BulletSprite": "FlameBullet",
+        "Cost": 450,
+        "TowerRange": 4,
+        "FireRate": 380,
+        "FireSpeed": 11,
+        "Damage": 2,
+        "penetrating": true
+    },
+    {
+        "TowerSprite": "Flame Turret4",
+        "BulletSprite": "FlameBullet",
+        "Cost": 900,
+        "TowerRange": 4.8,
+        "FireRate": 350,
+        "FireSpeed": 11,
+        "Damage": 3,
+        "penetrating": true
+    },
+    {
+        "TowerSprite": "Flame Turret5",
+        "BulletSprite": "FlameBullet",
+        "Cost": 99999999,
+        "TowerRange": 4.8,
+        "FireRate": 400,
+        "FireSpeed": 11,
+        "Damage": 3,
+        "penetrating": true
     }
     ]
 }
