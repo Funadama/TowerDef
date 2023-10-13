@@ -63,10 +63,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetWhat: 0
-  TowerRange: 3.5
-  FireRate: 120
-  FireSpeed: 10
-  Damage: 1
+  AtUpgrade: 0
+  TowerName: Test
+  TowerRange: 0
+  FireRate: 0
+  FireSpeed: 0
+  Damage: 0
   penetrating: 0
   RangeObject: {fileID: 5570729288120122453}
   Bulletprefab: {fileID: 8855417587758127974, guid: be9b1a514592f1a4fb1087cef95bf0e9, type: 3}

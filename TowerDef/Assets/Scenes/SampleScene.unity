@@ -37,8 +37,8 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -374,7 +374,7 @@ GameObject:
   - component: {fileID: 38091851}
   - component: {fileID: 38091852}
   m_Layer: 0
-  m_Name: Monkey_lane_thumb
+  m_Name: Spawner
   m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -476,6 +476,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1837845272108388759, guid: 3f0903b09e8e3894d80d991d37db86d0, type: 3}
   MoneyObject: {fileID: 829936443}
+  SetStats: {fileID: 1594675507}
+  TowerUI: {fileID: 1679901633}
 --- !u!114 &38091852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -492,6 +494,7 @@ MonoBehaviour:
   delay: 0.5
   HealthObject: {fileID: 608537942}
   MoneyGameObject: {fileID: 829936443}
+  WaveText: {fileID: 1078392989}
 --- !u!1 &164679865
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,7 +806,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1021,8 +1024,8 @@ RectTransform:
   m_Father: {fileID: 1943021158}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1528,7 +1531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22feba8ddaef5e2429166411dbca0340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HeatlhPlayer: 96
+  HeatlhPlayer: 100
   txt: {fileID: 608537945}
   Dead: {fileID: 1814113506}
 --- !u!114 &608537945
@@ -1639,7 +1642,7 @@ GameObject:
   - component: {fileID: 653192672}
   - component: {fileID: 653192673}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: TowerUpgrdae
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1658,7 +1661,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &653192673
 MonoBehaviour:
@@ -1672,6 +1675,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a075d43d5f5a7874ebde0246146e436a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoneyObject: {fileID: 0}
+  towerselect: {fileID: 0}
   towerUpgradesData:
     Upgrade: []
 --- !u!1 &673660283
@@ -1811,100 +1816,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673660283}
   m_CullTransparentMesh: 1
---- !u!1 &705507993
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 705507995}
-  - component: {fileID: 705507994}
-  m_Layer: 0
-  m_Name: Directional Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &705507994
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 705507993}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 1
-  m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 1
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &705507995
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &771054764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2094,7 +2005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c2f8e697a66c6d428967e76c11535da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AmountMoney: 100
+  AmountMoney: 150
   txt: {fileID: 829936446}
 --- !u!114 &829936446
 MonoBehaviour:
@@ -2661,7 +2572,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e700356a497aeb841a530792c885f715, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towersell: {fileID: 963194231}
+  towerselect: {fileID: 0}
+  TowerUI: {fileID: 1679901633}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2676,7 +2588,7 @@ GameObject:
   - component: {fileID: 963194230}
   - component: {fileID: 963194231}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Select
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2746,7 +2658,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &963194230
 MonoBehaviour:
@@ -2774,8 +2686,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 0}
+  Cost: {fileID: 653192673}
   ModeSlider: {fileID: 579796680}
   Stats: {fileID: 1088753236}
+  Name: {fileID: 178355420}
+  ButtonUpgrade: {fileID: 2012636316}
+  TowerUI: {fileID: 1679901633}
 --- !u!4 &1032920388 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5021895651548701603, guid: 1ef45b74a3b858f4399f4bf0e1da20d1, type: 3}
@@ -3625,7 +3541,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1507729442102995617, guid: 0b9f1d7b1778c004a9764a12f28f80cc, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1507729442102995617, guid: 0b9f1d7b1778c004a9764a12f28f80cc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3775,6 +3691,7 @@ GameObject:
   - component: {fileID: 1594675511}
   - component: {fileID: 1594675510}
   - component: {fileID: 1594675509}
+  - component: {fileID: 1594675512}
   m_Layer: 5
   m_Name: Upgrade
   m_TagString: Untagged
@@ -3846,7 +3763,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1594675510}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1594675512}
+        m_TargetAssemblyTypeName: TowerUpgradesScript, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1594675510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3885,6 +3814,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594675507}
   m_CullTransparentMesh: 1
+--- !u!114 &1594675512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594675507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a075d43d5f5a7874ebde0246146e436a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoneyObject: {fileID: 829936443}
+  towerselect: {fileID: 963194231}
+  towerUpgradesData:
+    Upgrade: []
 --- !u!1 &1635128241
 GameObject:
   m_ObjectHideFlags: 0
@@ -3951,7 +3896,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1657901799
 PrefabInstance:
@@ -4033,7 +3978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1679901634
 Transform:
   m_ObjectHideFlags: 0
@@ -4149,7 +4094,7 @@ RectTransform:
   - {fileID: 2006631458}
   - {fileID: 164679868}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4235,7 +4180,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6609339534049993723, guid: be9b1a514592f1a4fb1087cef95bf0e9, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6609339534049993723, guid: be9b1a514592f1a4fb1087cef95bf0e9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4287,7 +4232,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8855417587758127974, guid: be9b1a514592f1a4fb1087cef95bf0e9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be9b1a514592f1a4fb1087cef95bf0e9, type: 3}
@@ -4386,7 +4331,7 @@ RectTransform:
   - {fileID: 1974839262}
   - {fileID: 19323152}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4993,7 +4938,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Upgrade
 
-    100$'
+    0$'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

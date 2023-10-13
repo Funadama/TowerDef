@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class SellTower : MonoBehaviour
 {
-    public TowerSelect towersell;
+    public TowerSelect towerselect;
+
+    public GameObject TowerUI;
 
     public void SellTowerF()
     {
-        Destroy(towersell.tower);
+        Destroy(towerselect.tower);
+        TowerUI.SetActive(false);
     }
 }
