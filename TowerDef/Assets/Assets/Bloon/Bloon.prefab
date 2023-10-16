@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 6154224438968458559}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.06, y: 0.06, z: 0.06}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1507729442102995617}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: a4117a96c72b2644cb990a9afef7571a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 108d4bbab5f96274281044b27e39320d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -171,6 +171,7 @@ MonoBehaviour:
   AtEnd: 0
   HealthObject: {fileID: 138532976655323563, guid: 4072721f51c031444b76d8b8bd15fa04, type: 3}
   MoneyObject: {fileID: 0}
+  PopSound: {fileID: 3603412924034677397, guid: da324fc2958bbfe459982f4dfb1b4875, type: 3}
 --- !u!54 &6494315774295849866
 Rigidbody:
   m_ObjectHideFlags: 0

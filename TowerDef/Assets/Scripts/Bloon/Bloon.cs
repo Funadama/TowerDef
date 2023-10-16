@@ -12,7 +12,7 @@ public class Bloon : MonoBehaviour
     public bool AtEnd;
     public GameObject HealthObject;
     public GameObject MoneyObject;
-
+    public GameObject PopSound;
 
     void Start()
     {
@@ -40,7 +40,7 @@ public class Bloon : MonoBehaviour
             MoneyObject.GetComponent<Money>().AddMoney(Mathf.RoundToInt(collision.GetComponent<TowerBullet>().Damage));
             
             BloonHealth -= collision.GetComponent<TowerBullet>().Damage;
-            
+            Instantiate(PopSound, new Vector3(0, 0, 0), Quaternion.identity);
 
             if (!collision.GetComponent<TowerBullet>().penetrating)
             {

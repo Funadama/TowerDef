@@ -52,7 +52,7 @@ public class BloonSpawner : MonoBehaviour
 
             Debug.Log("Wave done");
             Debug.Log(string.Format("Amount: {0}", BloonSpawnAmount));
-            Debug.Log(string.Format("Hp: {0}", ((wave % 3 + 1) * wave / 3) + 1 + (wave / 10 * 5) + (wave / 20 * 10)));
+            Debug.Log(string.Format("Hp: {0}", ((wave % 3 + 1) * wave / 2) + 1 + (wave / 10 * 5) + (wave / 20 * 10)));
         }
 
     }
