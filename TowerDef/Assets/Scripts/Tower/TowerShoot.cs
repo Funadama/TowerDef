@@ -25,7 +25,7 @@ public class TowerShoot : MonoBehaviour
     private GameObject Target;
 
     public GameObject Bulletprefab;
-    private float distance;
+    public float distance;
 
 
 
@@ -103,5 +103,6 @@ public class TowerShoot : MonoBehaviour
         bullet.GetComponent<TowerBullet>().penetrating = penetrating;
 
         Object.Destroy(bullet, (TowerRange + 1.0f ) / FireSpeed );
+
     }
 }
