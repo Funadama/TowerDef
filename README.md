@@ -2,9 +2,9 @@
 
 In deze tower defense-game plaatsen spelers strategisch torens om waves van vijanden te verslaan en munten te verdienen. Het spel bevat een progressief wavesysteem en een health systeem. Spelers kunnen torens upgraden en hebben flexibele plaatsingsmogelijkheden, behalve op obstakels zoals bomen, paden en andere torens, waardoor de replaywaarde wordt verhoogd.
 
-![game](ReadMeVisuals\ScreenShotGame-0.png)
+![game](ReadMeVisuals/ScreenShotGame-0.png)
 
-![game](ReadMeVisuals\ScreenShotGame-1.png)
+![game](ReadMeVisuals/ScreenShotGame-1.png)
 
 
 ## Product 1: "DRY SRP Scripts op GitHub"
@@ -64,17 +64,16 @@ De player kunt hun torens bijna overal plaatsen zodat de replayability hoger is 
 
 ## Product 7: Class Diagram voor volledige codebase 
 
-[Code](https://github.com/Funadama/TowerDef/blob/main/ReadMeVisuals/Scripts.jpg)
+[Code](ReadMeVisuals/Scripts.jpg)
 
 
 
 ## Product 8: Prototype test video
 
 
-[![example test video](ReadMeVisuals\ScreenShotGame-1.png)](https://www.youtube.com/@Funadama)
+[![example test video](ReadMeVisuals/ScreenShotGame-1.png)](https://www.youtube.com/@Funadama)
 
 ## Product 9: SCRUM planning inschatting 
-
 
 [Link naar de trello](https://trello.com/b/MSsn1uiA/towerdef)
 
