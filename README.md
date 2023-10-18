@@ -77,4 +77,4 @@ De player kunt hun torens bijna overal plaatsen zodat de replayability hoger is 
 
 ## Product 10: Gitflow conventions
 
-[gitflow](TowerDef/tree/FeatureBranch)
+[gitflow](FeatureBranch)
