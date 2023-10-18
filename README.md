@@ -14,7 +14,7 @@ In deze tower defense-game plaatsen spelers strategisch torens om waves van vija
 
 ## Product 2: "Projectmappen op GitHub"
 
-Dit is de [ROOT](/TowerDef/tree/DevelopM/TowerDef/Assets) folder van mijn unity project.
+Dit is de [ROOT](/TowerDef/Assets) folder van mijn unity project.
 
 ## Product 3: Build op Github
 
