@@ -64,9 +64,7 @@ De player kunt hun torens bijna overal plaatsen zodat de replayability hoger is 
 
 ## Product 7: Class Diagram voor volledige codebase 
 
-[Code](ReadMeVisuals/Scripts.jpg)
-
-
+![Code](ReadMeVisuals/Scripts.jpg)
 
 ## Product 8: Prototype test video
 
