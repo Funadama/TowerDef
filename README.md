@@ -24,7 +24,7 @@ Dit is de [ROOT](/TowerDef/Assets) folder van mijn unity project.
 
 ## Product 4: Game met Sprites(animations) en Textures 
 
-![Textures Sprites](readmeVisuals/TowerDefGif.gif)
+![Textures Sprites](ReadMeVisuals/TowerDefGif.gif)
 
 ## Product 5: Issues met debug screenshots op GitHub 
 
