@@ -12,6 +12,8 @@ In deze tower defense-game plaatsen spelers strategisch torens om waves van vija
 *"In dit script heb ik een json gebruikt voor al mijn tower upgrades. Hierdoor heb ik mijzelf niet hoeven herhalen **(DRY)** in de code omdat ik gemakelijk de upgrades can verandere in de json file.
 [script](TowerDef/Assets/Scripts/Tower/TowerUpgradesScript.cs)"*
 
+*"In dit script heb ik een health script, en alles wat dit script doet is de health text zetten en het doodscherm activeren als je dood bent.[script](TowerDef/Assets/Scripts/UI/Health.cs)"*
+
 ## Product 2: "Projectmappen op GitHub"
 
 Dit is de [ROOT](/TowerDef/Assets) folder van mijn unity project.
@@ -22,11 +24,7 @@ Dit is de [ROOT](/TowerDef/Assets) folder van mijn unity project.
 
 ## Product 4: Game met Sprites(animations) en Textures 
 
-De build van je game bevat textures, sprites en sprite animations(bijv particles) die op de juiste manier zijn gebruikt en zorgen voor een goede afwerking van je game.  
-
-Plaats in je readme een animated gif van je gameplay (+- 10 sec.) waarin de implementatie van je textures en sprites goed te zien is.
-
-![Textures Sprites](readmeVisuals/texturesSprites.gif)
+![Textures Sprites](readmeVisuals/TowerDefGif.gif)
 
 ## Product 5: Issues met debug screenshots op GitHub 
 
@@ -69,7 +67,7 @@ De player kunt hun torens bijna overal plaatsen zodat de replayability hoger is 
 ## Product 8: Prototype test video
 
 
-[![example test video](ReadMeVisuals/ScreenShotGame-1.png)](https://www.youtube.com/@Funadama)
+[![example test video](ReadMeVisuals/ScreenShotGame-1.png)](https://youtu.be/Ng6COyqt0OA)
 
 ## Product 9: SCRUM planning inschatting 
 
@@ -77,4 +75,4 @@ De player kunt hun torens bijna overal plaatsen zodat de replayability hoger is 
 
 ## Product 10: Gitflow conventions
 
-[gitflow](https://github.com/Funadama/TowerDef/tree/FeatureBranch)
+[gitflow](https://github.com/Funadama/TowerDef/tree/ResetGame)
