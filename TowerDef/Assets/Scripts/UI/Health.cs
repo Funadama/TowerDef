@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    private float HeatlhPlayer;
+    public float HeatlhPlayer;
     public TMP_Text txt;
     public Canvas Dead;
 
