@@ -29,7 +29,7 @@ public class TowerUpgradesScript : MonoBehaviour
 
     public void Upgrade()
     {
-        TowerShoot Tower = towerselect.tower.GetComponent<TowerShoot>();
+        Tower Tower = towerselect.tower.GetComponent<Tower>();
         if (MoneyObject.GetComponent<Money>().AmountMoney >= towerUpgradesData.Upgrade[Tower.AtUpgrade].Cost)
         {
             MoneyObject.GetComponent<Money>().AddMoney(-1 * towerUpgradesData.Upgrade[Tower.AtUpgrade].Cost);
@@ -46,7 +46,7 @@ public class TowerUpgradesScript : MonoBehaviour
 
     public void SetStats(GameObject TowerObject)
     {
-        TowerShoot Tower = TowerObject.GetComponent<TowerShoot>();
+        Tower Tower = TowerObject.GetComponent<Tower>();
         Tower.TowerName = towerUpgradesData.Upgrade[Tower.AtUpgrade].TowerSprite;
         Tower.TowerRange = towerUpgradesData.Upgrade[Tower.AtUpgrade].TowerRange;
         Tower.FireRate = towerUpgradesData.Upgrade[Tower.AtUpgrade].FireRate;

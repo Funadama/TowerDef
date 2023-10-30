@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerShoot : MonoBehaviour
+public class Tower : MonoBehaviour
 {
     public int TargetWhat;
 

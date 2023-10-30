@@ -8,6 +8,6 @@ public class TowerChangeMode : MonoBehaviour
 
     public void Change(float amount)
     {
-        towersell.tower.GetComponent<TowerShoot>().TargetWhat = Mathf.RoundToInt(amount);
+        towersell.tower.GetComponent<Tower>().TargetWhat = Mathf.RoundToInt(amount);
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TowerSelect : MonoBehaviour
 {
-    private TowerShoot TowerScript;
+    private Tower TowerScript;
 
     public GameObject tower;
     public TowerUpgradesScript Cost;
@@ -21,7 +21,7 @@ public class TowerSelect : MonoBehaviour
     {
         tower = Tower;
         TowerUI.SetActive(true);
-        TowerScript = Tower.GetComponent<TowerShoot>();
+        TowerScript = Tower.GetComponent<Tower>();
         Name.text = TowerScript.TowerName;
         if (99999999 > Cost.towerUpgradesData.Upgrade[TowerScript.AtUpgrade].Cost)
         {
